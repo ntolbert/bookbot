@@ -1,8 +1,19 @@
+from re import split
+from typing import Counter
+
+
 def word_count(result):
-    s = result.split()
-    c = len(s)
+    strg = result.split()
+    c = len(strg)
     return c
 
 def letter_count(result):
-    s = result.lower().split()
-    # going to learn dictionarys in python 1
+    chars ={}
+    for letter in result:
+        s = letter.lower()
+        if s in chars:
+            chars[s]+=1 
+        else:
+            chars[s] = 1
+    return chars
+
