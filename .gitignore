@@ -1,6 +1,6 @@
 /books
 /tmp.txt
-/<CR>
-/<cr>
-/-c
-/clipboard
+<CR>
+<cr>
+-c
+clipboard
