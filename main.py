@@ -1,17 +1,26 @@
-from stats import dict_formatter, letter_count, word_count,sort_char_count 
+from stats import  letter_count, word_count,char_count_list  
+filepath = "books/frankenstein.txt"
 
 def get_book_text(filepath):
         with open(filepath) as f:
             booktext = f.read()
             return booktext
 def main():
-    result = get_book_text("books/frankenstein.txt")
+    result = get_book_text(filepath)
     num_words = word_count(result)
-    print(f"{num_words} words found in the document")
     num_letters = letter_count(result)
+    sorted_char_count = char_count_list(letter_count(result))
     #print(num_letters)
-    forrmater = dict_formatter(num_letters,"new_di","name","num")
-    print(forrmater)
-    #report = sort_char_count(num_letters)
-    #print(report)
+
+    print(
+    f"""
+    ============ BOOKBOT ============
+    Analying book found at {filepath}...
+    ----------- Word Count ----------
+    {num_words} words found in the document
+    --------- Character Count -------
+    {sorted_char_count}
+
+    """)
+
 main()
