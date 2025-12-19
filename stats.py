@@ -1,7 +1,3 @@
-from re import split
-from typing import Counter
-
-
 def word_count(result):
     strg = result.split()
     c = len(strg)
@@ -16,17 +12,23 @@ def letter_count(result):
         else:
             dict_of_chars[current_letter] = 1
     return dict_of_chars
+def sort_on(item):
+    return item["num"]
+def char_count_list(char_dict):
+    list_of_letter_count_dict=[]
+    dict_char_num={}
+    for val in char_dict:
+        dict_char_num["char"]= val  
+        dict_char_num["num"] = char_dict[val]
+        if dict_char_num["char"].isalpha():
+            list_of_letter_count_dict.append(dict_char_num)
+        dict_char_num={}
+    list_of_letter_count_dict.sort(reverse=True, key=sort_on)
+    
+    return list_of_letter_count_dict
+    
 
-def dict_formatter(input_dict,new_dict_name,key_name):
-    new_dict_name = []
-    for key in input_dict:
-        new_dict_name[key_name]= key
-        print(new_dict_name)
-dict_formatter(letter_count,"test_dict","word")
 
 
-def sort_char_count(dict_of_char):
-    for char in dict_of_char:
-        print(dict_of_char)
-    return dict_of_char
+
 
