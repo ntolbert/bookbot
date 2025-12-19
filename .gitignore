@@ -1,6 +1,42 @@
-/books
-/tmp.txt
-<CR>
-<cr>
--c
-clipboard
+# Byte-code files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+# specific to tools like poetry, pipenv, etc.
+.Python
+pip-log.txt
+pip-delete-this-arg.txt
+
+# IDE-specific files (optional, can be added to a global gitignore)
+.idea/  # PyCharm
+.vscode/ # VS Code
+*.suo
+*.user
+*.casc
+*.pid
+*.seed
+
+# Testing and coverage
+.coverage
+.tox/
+htmlcov/
+
+# Distribution / build files
+dist/
+build/
+*.whl
+*.egg
+
+# OS and miscellaneous files
+.DS_Store # macOS
+Thumbs.db # Windows
+
